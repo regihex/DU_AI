@@ -1,0 +1,10 @@
+s(S0,S):-np(S0,S1),vp(S1,S).
+np(S0,S):-n(S0,S).
+np(S0,S):-det(S0,S1),n(S1,S).
+vp(S0,S):-v(S0,S1),pp(S1,S).
+pp(S0,S):-prep(S0,S1),np(S1,S).
+n(S0,S):-S0=[jack|S].
+n(S0,S):-S0=[table|S].
+det(S0,S):-S0=[the|S].
+v(S0,S):-S0=[slept|S].
+prep(S0,S):-S0=[on|S].
